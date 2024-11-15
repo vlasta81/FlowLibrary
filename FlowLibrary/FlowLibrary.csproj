@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<OutputType>Library</OutputType>
+		<RootNamespace>FlowLibrary</RootNamespace>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<InformationalVersion>1.0.0</InformationalVersion>
+		<Authors>vlasta81</Authors>
+		<Company>vlasta81</Company>
+		<Description>FlowLibrary is a library for creating and managing request and response processing flows in .NET 9 Core API applications. It allows easy assembly of chains of responsibility, middleware, and commands with support for decorators, simplifying the management of complex processing flows.</Description>
+		<RepositoryUrl>https://github.com/vlasta81/FlowLibrary/</RepositoryUrl>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\FlowLibrary.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DefaultDocumentationFolder>docs</DefaultDocumentationFolder>
+		<DefaultDocumentationAssemblyPageName>FlowLibrary</DefaultDocumentationAssemblyPageName>
+		<DefaultDocumentationGeneratedAccessModifiers>Public,Protected,Internal</DefaultDocumentationGeneratedAccessModifiers>
+		<DefaultDocumentationGeneratedPages>Namespaces,Types,Members</DefaultDocumentationGeneratedPages>
+		<DefaultDocumentationNamespaceAsFolder>true</DefaultDocumentationNamespaceAsFolder>
+		<DefaultDocumentationUseShortMethodNames>true</DefaultDocumentationUseShortMethodNames>
+		<DefaultDocumentationFileNameFactory>NameAndMd5Mix</DefaultDocumentationFileNameFactory>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DefaultDocumentation" Version="0.8.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="src/**/*.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+	</ItemGroup>
+
+</Project>
